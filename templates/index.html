@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Страны</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+</head>
+<body>
+  <div class="container py-4">
+    <h1 class="mb-4">Страны</h1>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+            <th>id</th>
+            <th>country_name</th>
+            <th>capital_of_the_country</th>
+            <th>living_standard</th>
+            <th>country_area</th>
+            <th>population_of_the_country</th>
+            <th>phone_code</th>
+        </tr>
+      </thead>
+                {% for country in countries %}
+            <tr>
+                <td>{{ country.id }}</td>
+                <td>{{ country.country_name }}</td>
+                <td>{{ country.capital_of_the_country }}</td>
+                <td>{{ country.living_standard }}</td>
+                <td>{{ country.country_area }}</td>
+                <td>{{ country.population_of_the_country }}</td>
+                <td>{{ country.phone_code }}</td>
+            </tr>
+                 {% endfor %}
+    </table>
+  </div>
+
+</body>
+</html>
+
+
+
+
